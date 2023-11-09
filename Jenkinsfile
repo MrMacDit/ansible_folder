@@ -9,7 +9,7 @@ pipeline {
         stage('Hello') {
             steps {
                 echo 'Hello World'
-                sh 'ansible --version'
+                echo 'Testing dynamic ansible'
                 sh 'ansible-inventory --graph'
             }
         }
