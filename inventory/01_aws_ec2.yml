@@ -1,10 +1,6 @@
 plugin: aws_ec2
-region:
+regions:
   - eu-west-1
 keyed_groups:
-  - prefix: tag
-    key: "tags"
-  - prefix: aws_region
-    key: placement.region
-  - key: tags.Environment
-    separator: ""
+  - key: tags
+    prefix: tag
