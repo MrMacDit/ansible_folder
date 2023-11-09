@@ -9,8 +9,6 @@ pipeline {
         stage('Hello') {
             steps {
                 echo 'Hello World'
-                echo 'Testing dynamic ansible'
-                sh 'ansible-inventory --graph'
             }
         }
         stage ('Use Ansible to provision Docker and folders') {
