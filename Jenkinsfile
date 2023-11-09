@@ -2,7 +2,6 @@ pipeline {
     agent any
         environment{
             REPOSITORY_NAME = "ansible_folder"
-            EC2_INSTANCE = "3.249.109.95"
             SSH_KEY = credentials('SSH_KEY')
 
         }
@@ -11,6 +10,7 @@ pipeline {
             steps {
                 echo 'Hello World'
                 sh 'ansible --version'
+                sh 'ansible-inventory --graph'
             }
         }
         stage ('Use Ansible to provision Docker and folders') {
