@@ -2,7 +2,7 @@ pipeline {
     agent any
         environment{
             REPOSITORY_NAME = "ansible_folder"
-            EC2_INSTANCE = "3.252.51.232"
+            EC2_INSTANCE = "3.249.109.95"
             SSH_KEY = credentials('SSH_KEY')
 
         }
